@@ -14,14 +14,12 @@ import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
 
+@CrossOrigin
 @RestController
 public class MailController implements HealthIndicator {
 
@@ -60,6 +58,22 @@ public class MailController implements HealthIndicator {
         String retour = "Ceci est le retour de mail-test du micro service mail";
 
         return retour;
+    }
+
+    @PostMapping(value = "/addMailAdress")
+    public ResponseEntity addMailtoNewsletterList(@RequestBody String email){
+
+        System.out.println(email);
+
+        return new ResponseEntity("email adress has been added",HttpStatus.CREATED);
+    }
+
+    @PostMapping(value = "/delMailAdress/{email}")
+    public ResponseEntity delMailtoNewsletterList(@PathVariable String email){
+
+
+
+        return new ResponseEntity("email adress has been deleted",HttpStatus.CREATED);
     }
 
     /**
