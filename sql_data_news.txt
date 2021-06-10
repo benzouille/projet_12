@@ -1,0 +1,31 @@
+INSERT into COMMUNICATION (author, body, date, image_path, title, type_com, url) 
+values ('Claire', 'C est noel  cest la joie et la bonne humeur allons défoncer le pere noel !!! faisons lui cracher ses cadeaux par le cul !!!', current_date, 'test.png', 'Noel', 'MANIFESTATION', null);
+INSERT into COMMUNICATION (author, body, date, image_path, title, type_com, url) 
+values ('Claire', 'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', current_date, 'ben.jpg', 'Photo de classe', 'ACTUALITE', null);
+INSERT into COMMUNICATION (author, body, date, image_path, title, type_com, url) 
+values ('Claire', 'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', current_date, 'ben2_mini.jpg', 'Pâques', 'MANIFESTATION', null);
+INSERT into COMMUNICATION (author, body, date, image_path, title, type_com, url) 
+values ('Claire', 'Nouvelle année scolaire donc nouvelle adhésion a l''ape cette année on va tout péter, faites rentrer la thune que je me tape un saladier de coke avec l''argent pour les niarfs!!!!!!!!', current_date, '64px-Skull_and_crossbones.svg.png', 'renouvellement cotisation', 'INFORMATION', null);
+INSERT into COMMUNICATION (author, body, date, image_path, title, type_com, url) 
+values ('Claire', 'Le retrait des commandes de chocolats de Pâques est prévu sous forme de « drive piéton » au nouveau local de l''APE (porte avant de l’ancienne école de Koenigsmacker située 1, rue du Père Scheil), dans le respect des règles sanitaires. Nous comptons sur vous pour respecter scrupuleusement les gestes barrières (port du masque obligatoire, distances à respecter…).\n Les permanences sont les suivantes :\n - Jeudi 1er avril : 16h-18h\n - Vendredi 2 avril : 10h-12h et 14h-16h\n - Samedi 3 avril : 10h12h et 14h-16h \n Bon week-end à tous et à bientôt !', current_date, 'chocolat.png', 'COMMANDES DE CHOCOLATS', 'INFORMATION', null);
+
+INSERT into MEDIUM (medium_name) values ('FACEBOOK');
+INSERT into MEDIUM (medium_name) values ('MAIL');
+INSERT into MEDIUM (medium_name) values ('SITE');
+
+
+INSERT into communication_mediums (communication_id, mediums_id) values (1, 2);
+INSERT into communication_mediums (communication_id, mediums_id) values (1, 3);
+INSERT into communication_mediums (communication_id, mediums_id) values (2, 1);
+INSERT into communication_mediums (communication_id, mediums_id) values (2, 3);
+INSERT into communication_mediums (communication_id, mediums_id) values (3, 1);
+INSERT into communication_mediums (communication_id, mediums_id) values (3, 2);
+INSERT into communication_mediums (communication_id, mediums_id) values (3, 3);
+INSERT into communication_mediums (communication_id, mediums_id) values (4, 1);
+INSERT into communication_mediums (communication_id, mediums_id) values (4, 2);
+INSERT into communication_mediums (communication_id, mediums_id) values (4, 3);
+INSERT into communication_mediums (communication_id, mediums_id) values (5, 1);
+INSERT into communication_mediums (communication_id, mediums_id) values (5, 2);
+INSERT into communication_mediums (communication_id, mediums_id) values (5, 3);
+
+
