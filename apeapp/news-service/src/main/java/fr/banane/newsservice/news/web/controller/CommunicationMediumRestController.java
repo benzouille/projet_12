@@ -4,7 +4,6 @@ import fr.banane.newsservice.news.entities.Communication;
 import fr.banane.newsservice.news.entities.Medium;
 import fr.banane.newsservice.news.exceptions.ObjectNotFoundException;
 import fr.banane.newsservice.news.services.CommunicationMediumService;
-//import fr.banane.newsservice.news.web.proxies.MailProxy;
 import fr.banane.newsservice.news.web.proxies.MailProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,11 +23,11 @@ public class CommunicationMediumRestController {
 
     //------------------------- ATTRIBUTS -------------------------
 
-    private final CommunicationMediumService communicationMediumService;
+    private CommunicationMediumService communicationMediumService;
 
-    private final MailProxy mailProxy;
+    private MailProxy mailProxy;
 
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * Constructeur avec injection de dépendence
@@ -39,6 +38,10 @@ public class CommunicationMediumRestController {
         this.communicationMediumService = communicationMediumService;
         this.mailProxy = mailProxy;
     }
+
+//    public CommunicationMediumRestController(CommunicationMediumService communicationMediumService) {
+//        this.communicationMediumService = communicationMediumService;
+//    }
 
     //-----------------------------COMMUNICATION-----------------------------
 
@@ -77,16 +80,6 @@ public class CommunicationMediumRestController {
     public List<Communication> getAllCommunicationsForSite() {
         log.info("appel du microservice news methode /CommunicationsForSite");
         return communicationMediumService.loadCommunicationByMediumName("SITE");
-    }
-
-    /**
-     * Endpoint de renvoi d'une liste objet communication ayant pour medium "SITE" pour la page d'accueil du site {@link Communication}
-     * @return List Communication
-     */
-    @GetMapping(path = "/CommunicationsForMainPage")
-    public List<Communication> getAllCommunicationsForMainPage() {
-        log.info("appel du microservice news methode /CommunicationsForMainPage");
-        return communicationMediumService.loadThirdCommunicationByMediumName("SITE");
     }
 
     /**

@@ -12,7 +12,6 @@ public interface CommunicationMediumService {
     Optional<Communication> findById(long id);
     List<Communication> listCommunications();
     List<Communication> loadCommunicationByMediumName(String mediumName);
-    List<Communication> loadThirdCommunicationByMediumName(String mediumName);
     List<Communication> loadCommunicationByTypeCom(String typeCom);
     List<Communication> loadCommunicationsBytitle(String title);
     Communication addNewCommunication(Communication communication);

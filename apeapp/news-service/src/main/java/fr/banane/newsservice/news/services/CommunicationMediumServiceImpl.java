@@ -49,9 +49,6 @@ public class CommunicationMediumServiceImpl implements CommunicationMediumServic
     public List<Communication> loadCommunicationByMediumName(String mediumName){ return communicationRepository.findAllByMediumsName(mediumName); }
 
     @Override
-    public List<Communication> loadThirdCommunicationByMediumName(String mediumName){ return communicationRepository.findThirdByMediumName(mediumName); }
-
-    @Override
     public List<Communication> loadCommunicationByTypeCom(String typeCom) { return communicationRepository.findAllByTypeCom(typeCom); }
 
     @Override

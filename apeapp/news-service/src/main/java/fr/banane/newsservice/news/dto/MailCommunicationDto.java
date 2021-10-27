@@ -1,16 +1,16 @@
-package fr.banane.mailservice.model;
+package fr.banane.newsservice.news.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * POJO des données du mail a envoyer
- */
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Communication {
+@AllArgsConstructor
+public class MailCommunicationDto {
 
     //------------------------- ATTRIBUTS -------------------------
 
@@ -21,7 +21,4 @@ public class Communication {
     private String imgPath;
 
     private String linkToSite;
-
-    private String unSubMailingList;
-
 }

@@ -17,7 +17,7 @@ public class MailContentGeneratorImpl implements MailContentGenerator {
     public MailContentGeneratorImpl(final Configuration conf)
             throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException {
         super();
-        template = conf.getTemplate("mailPrereservationDispo.ftl");
+        template = conf.getTemplate("PubliMailTemplate.ftl");
     }
 
     @Override

@@ -11,7 +11,6 @@ import java.io.IOException;
 
 
 @Controller
-@CrossOrigin
 public class FileController {
 
     StorageService storageService;

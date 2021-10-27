@@ -10,7 +10,6 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface CommunicationRepository extends JpaRepository<Communication, Long> {
-
     List<Communication> findAllByTitle(String title);
 
     @Query(value = "SELECT * FROM COMMUNICATION WHERE TYPE_COM = :TYPE_COM", nativeQuery = true)
@@ -18,8 +17,5 @@ public interface CommunicationRepository extends JpaRepository<Communication, Lo
 
     @Query(value = "SELECT * FROM COMMUNICATION INNER JOIN communication_mediums ON communication_mediums.communication_id = communication.id INNER JOIN medium ON communication_mediums.mediums_id = medium.id WHERE medium_name =:mediumName", nativeQuery = true)
     List<Communication> findAllByMediumsName(@Param("mediumName")String mediumName);
-
-    @Query(value = "SELECT * FROM COMMUNICATION INNER JOIN communication_mediums ON communication_mediums.communication_id = communication.id INNER JOIN medium ON communication_mediums.mediums_id = medium.id WHERE medium_name =:mediumName order by communication.id desc limit 3", nativeQuery = true)
-    List<Communication> findThirdByMediumName(@Param("mediumName")String mediumName);
 
 }

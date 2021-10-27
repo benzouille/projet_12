@@ -17,4 +17,6 @@ public class EmailAddress {
     private Long id;
 
     private String emailAddress;
+
+    private String dateAdded;
 }

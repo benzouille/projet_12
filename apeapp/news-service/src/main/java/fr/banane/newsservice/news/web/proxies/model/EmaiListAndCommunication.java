@@ -1,8 +1,10 @@
-package fr.banane.mailservice.model;
+package fr.banane.newsservice.news.web.proxies.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 /**
  * POJO des données du mail a envoyer
@@ -10,9 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Communication {
+public class EmaiListAndCommunication {
 
     //------------------------- ATTRIBUTS -------------------------
+
+    private List<String> email;
 
     private String title;
 
@@ -20,8 +24,6 @@ public class Communication {
 
     private String imgPath;
 
-    private String linkToSite;
-
-    private String unSubMailingList;
+    private List<String> linkToOtherMedium;
 
 }
